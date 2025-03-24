@@ -1,6 +1,6 @@
 # =====================================================================
 #   Noughts and Crosses
-#   In Python, by Sheraz, 11-12 Dec 2024
+#   In Python, by Sheraz, 11-12 Dec 2024, update March 2025
 # =====================================================================
 
 # =====================================================================
@@ -8,8 +8,6 @@
 # =====================================================================
 def show_results (Display_Value): 
     space = """
-    
-    
 
     ------------------------------------------------------------------------
 
@@ -58,22 +56,18 @@ def ask_for_slot(data_grid):
 
 # =====================================================================
 #   Ask user for the value
-# 
 # =====================================================================
 def ask_for_value():
     player_value = input(" X ---- O ")
     #check value choosen being X or O
     return player_value.upper()
 
-
 # =====================================================================
 #   update the grid with the input value
-# 
 # =====================================================================
 def update_grid(data_grid, player_slot, player_value):
     
     #add checks for the submitted values
-    
     #print (data_grid)
     #print (player_slot)
     #print (player_value)
@@ -81,16 +75,11 @@ def update_grid(data_grid, player_slot, player_value):
     new_player_slot = int(player_slot)    
     data_grid[new_player_slot] = player_value
     #print (data_grid[new_player_slot], " - UPDATED ")
-  
     #print (data_grid)
     return data_grid
     
-
-
-
 # =====================================================================
 #   Show the grid on display
-# 
 # =====================================================================
 def show_grid(data_grid):
     
@@ -114,11 +103,8 @@ def show_grid(data_grid):
                 row +=1
     return
 
-
-
-
 # =====================================================================
-#   check if slot already used
+#  check if slot already used
 #  havent coded yet
 # =====================================================================
 def check_slot_usage():
@@ -126,8 +112,7 @@ def check_slot_usage():
     return
 
 # =====================================================================
-#   Check if user has won
-# 
+#  Check if user has won
 # =====================================================================
 def check_if_won():
     
@@ -167,15 +152,11 @@ def check_if_won():
 
 # =====================================================================
 #   Core data fields
-# 
 # =====================================================================
 
 #check if slot is correct
 check_slot_options = ["a1", "b1", "c1", "a2", "b2", "c2", "a3", "b3", "c3"]
-
-
 introduction = "Noughts and Crosses"
-
 data_grid = ["-", "-", "-", "-", "-", "-", "-", "-", "-"]
 player1 = "Sheraz"
 player2 = "Kiddu"
@@ -183,8 +164,6 @@ game_loop = 0
 print(show_results(""))
 show_grid(data_grid)
 print(show_results(""))
-
-
 
 def check_slot_if_free(data_grid, the_slot):
     
@@ -195,7 +174,6 @@ def check_slot_if_free(data_grid, the_slot):
         #print("NOT FREE")
         free = False
     return free
-
 
 def check_if_value_correct(the_value):
     
@@ -210,23 +188,15 @@ def check_if_value_correct(the_value):
         value_okay = False
     return value_okay
 
-
-
-
 if game_loop >=5:
         check_if_won()
         
-
-
-
-
 while game_loop <=8 :
     #print(game_loop)
     
     if game_loop >=5:
         check_if_won()
   
-    
     the_slot = ask_for_slot(data_grid)
     
     if check_slot_if_free(data_grid, the_slot) == True :
