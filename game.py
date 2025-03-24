@@ -158,8 +158,8 @@ def check_if_won():
 check_slot_options = ["a1", "b1", "c1", "a2", "b2", "c2", "a3", "b3", "c3"]
 introduction = "Noughts and Crosses"
 data_grid = ["-", "-", "-", "-", "-", "-", "-", "-", "-"]
-player1 = "Sheraz"
-player2 = "Kiddu"
+player1 = "Superman"
+player2 = "Batman"
 game_loop = 0
 print(show_results(""))
 show_grid(data_grid)
